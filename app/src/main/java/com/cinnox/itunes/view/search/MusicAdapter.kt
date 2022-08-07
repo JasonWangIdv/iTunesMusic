@@ -13,7 +13,7 @@ class MusicAdapter : RecyclerView.Adapter<MusicAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val viewBinding = ItemMusicBinding.inflate(inflater)
+        val viewBinding = ItemMusicBinding.inflate(inflater, parent, false)
         return ViewHolder(viewBinding)
     }
 
