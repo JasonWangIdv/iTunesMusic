@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.cinnox.itunes.databinding.ItemMusicBinding
 import com.cinnox.itunes.entity.MusicEntity
+import com.cinnox.itunes.utils.MusicPlayerManager
 
 class MusicAdapter : RecyclerView.Adapter<MusicAdapter.ViewHolder>() {
 
@@ -30,6 +31,18 @@ class MusicAdapter : RecyclerView.Adapter<MusicAdapter.ViewHolder>() {
             Glide.with(viewBinding.root).load(item.coverUrl).into(viewBinding.ivCover)
             viewBinding.tvTrackName.text = item.trackName
             viewBinding.tvArtisName.text = item.artisName
+
+            viewBinding.btnPlayer.setOnClickListener {
+                MusicPlayerManager.playMusic(item)
+            }
+
+            viewBinding.btnPause.setOnClickListener {
+                MusicPlayerManager.pauseMusic()
+            }
+
+            viewBinding.btnStop.setOnClickListener {
+                MusicPlayerManager.stopMusic()
+            }
         }
     }
 

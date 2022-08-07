@@ -20,6 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/tvArtisName"
+        app:layout_constraintEnd_toStartOf="@id/btnPlayer"
         app:layout_constraintStart_toEndOf="@id/ivCover"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
@@ -30,8 +31,36 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPlayer"
         app:layout_constraintStart_toStartOf="@id/tvTrackName"
         app:layout_constraintTop_toBottomOf="@id/tvTrackName"
         tools:text="Artis Name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp50"
+        android:text="@string/player"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        app:layout_constraintEnd_toStartOf="@id/btnPause"
+        app:layout_constraintTop_toTopOf="@id/ivCover" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp50"
+        android:text="@string/pause"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        app:layout_constraintEnd_toStartOf="@id/btnStop"
+        app:layout_constraintTop_toTopOf="@id/ivCover" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp50"
+        android:text="@string/stop"
+        app:layout_constraintBottom_toBottomOf="@id/ivCover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivCover" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

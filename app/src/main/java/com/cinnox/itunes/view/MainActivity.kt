@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 val result = searchMusic(view.text.toString())
                 val entities: List<MusicEntity> =
                     result.results.map {
-                        MusicEntity(it.artworkUrl60, it.trackName, it.artistName)
+                        MusicEntity(it.artworkUrl60, it.trackName, it.artistName, it.previewUrl)
                     }
                 adapter.replaceDataAll(entities)
             }
